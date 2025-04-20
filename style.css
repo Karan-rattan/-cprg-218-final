@@ -1,0 +1,502 @@
+
+/* style pallete for the entire web*/
+:root {
+    --primary:    #E43D12;
+    --secondary:  #D6536D;
+    --light-pink: #FFA2B6;
+    --accent:     #EFB11D;
+    --bg:         #EBE9E1;
+    --text:       #333;
+  }
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+/*Header and nav*/
+  header {
+    background: var(--bg);
+    border-bottom: 3px solid var(--primary);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li + li {
+    margin-left: 1.5rem;
+  }
+  
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    background: var(--primary);
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+/*hero banner*/
+  .hero {
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: 30rem;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+color: #fff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+   
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  }
+  
+  .hero-text p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+
+  .moments {
+    padding: 3rem 0;
+  }
+  
+  .moments h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .features article {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .features img {
+    width: 100%;
+    display: block;
+  }
+  
+  .features h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--primary);
+  }
+  
+  .features p {
+    padding: 0 1rem 1rem;
+  }
+  
+ /*accommodations*/
+  .accommodations {
+    background: var(--light-pink);
+    padding: 3rem ;
+  }
+  
+  .accommodations h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+  
+  .accommodations .rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .accommodations .room {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  
+  .accommodations .room img {
+    width: 100%;
+    display: block;
+  }
+  
+  .accommodations .room h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--secondary);
+  }
+  
+  .accommodations .room p {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .accommodations .room .btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .accommodations .room .btn:hover {
+    background: var(--primary);
+  }
+  
+/*guest room style*/
+  .rooms {
+    padding: 3rem 0;
+  }
+  
+  .rooms h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+  }
+  
+  .rooms .intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  .room-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .room-list .room {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .room-list figure {
+    margin: 0;
+  }
+  
+  .room-list img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .room-list figcaption {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: var(--primary);
+    background: var(--light-pink);
+  }
+  
+  .room-list ul {
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  .room-list ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .room-list ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  /*culinary style guide*/
+  .culinary {
+    padding: 3rem 0;
+  }
+  
+  .culinary h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+  }
+  
+  .culinary .intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  .culinary article {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .culinary article img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .culinary article h3 {
+    margin: 1rem;
+    color: var(--primary);
+  }
+  
+  .culinary article p {
+    margin: 0 1rem 1rem;
+  }
+  
+  .culinary article ul {
+    list-style: none;
+    padding-left: 1.2rem;
+    margin: 0 1rem 1rem;
+  }
+  
+  .culinary article ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .culinary article ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  
+/*activities style*/
+  .activities,
+  .excursions {
+    padding: 3rem 0;
+  }
+  
+  .activities h2,
+  .excursions h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+  }
+  
+  .activities article,
+  .excursions article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .activities img,
+  .excursions img {
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+  }
+  
+  .activities h3,
+  .excursions h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+  
+  .activities ul,
+  .excursions ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .activities ul li,
+  .excursions ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .activities ul li::before,
+  .excursions ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  
+ /*booking info css*/
+  .booking-info {
+    background: #fff;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .booking-info h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .booking-info ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .booking-info ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .booking-info ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+  }
+  
+/*Testimonials style css*/
+  .testimonials {
+    padding: 3rem 0;
+  }
+  
+  .testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+  }
+  
+  .testimonials article {
+    display: flex;
+    gap: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .testimonials figure {
+    text-align: center;
+  }
+  
+  .testimonials figure img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .testimonials figure figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--primary);
+  }
+  
+  .testimonials blockquote {
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .testimonials blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: right;
+    font-weight: bold;
+    color: var(--secondary);
+  }
+  
+  .testimonials .more {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+  
+  .testimonials .more a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .testimonials .more a:hover {
+    color: var(--secondary);
+  }
+  
+/*style guide for the footer*/
+  footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
